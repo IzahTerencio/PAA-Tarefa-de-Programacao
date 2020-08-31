@@ -3,6 +3,8 @@
 
 using namespace std;
 
+// FUNÇÃO RESPONSÁVEL POR FAZER
+// O PARTICIONAMENTO DO ARRANJO
 int particiona(int a[], int p, int r){
     int element = a[r];
     int indice = (p-1);
@@ -26,6 +28,7 @@ int particiona(int a[], int p, int r){
     return(indice+1);
 }
 
+// PROCEDIMENTO PRINCIPAL DA ORDENAÇÃO
 void quicksort(int a[], int p, int r){
     int q = 0;
 
@@ -36,6 +39,8 @@ void quicksort(int a[], int p, int r){
     }
 }
 
+// PROCEDIMENTO PARA EXIBIR DE MANEIRA
+// FORMATADA OS ELEMENTOS DO ARRANJO.
 void mostra_vetor(int a[], int tamVet){
     cout << "A = {";
     for(int i=0; i<(tamVet); i++){
