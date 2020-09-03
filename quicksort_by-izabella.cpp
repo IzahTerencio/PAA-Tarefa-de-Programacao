@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include<clocale>
 
 using namespace std;
 
@@ -54,6 +55,8 @@ void mostra_vetor(int a[], int tamVet){
 }
 
 int main(){
+    setlocale(LC_ALL, "Portuguese"); // para acentuação e caracteres especiais
+
     int vetor[] = {9 , 10 , -1, 3, 6, 2, 1, -3, 1, 0, -2, 15, 8, -7, 0};
 
     int tamanho = (sizeof(vetor)/sizeof(int));
@@ -63,7 +66,7 @@ int main(){
     mostra_vetor(vetor, tamanho);
     cout << endl;
 
-    quicksort(vetor, 0, 14);
+    quicksort(vetor, 0, (tamanho-1));
 
     cout << "VETOR DE SAÍDA: ";
     mostra_vetor(vetor, tamanho);
